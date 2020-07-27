@@ -18,6 +18,7 @@ namespace WishList
             services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("Wishlist"));
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            
 
         }
 
@@ -32,7 +33,7 @@ namespace WishList
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+            app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
         }
     }
