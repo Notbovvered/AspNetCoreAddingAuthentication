@@ -56,5 +56,12 @@ namespace WishList.Controllers
         {
             return View("Login");
         }
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginViewModel model)
+        {
+            return RedirectToAction("Index");
+        }
     }
 }
