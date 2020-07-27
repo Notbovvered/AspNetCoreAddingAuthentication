@@ -4,17 +4,17 @@
     <form asp-action="Register">
         <div class="text-danger", asp-validation-summary="All"></div>
         <div>
-            <label>Email</label>
+            <label asp-for="Email"></label>
             <br />
             <input asp-for="Email" />
         </div>
         <div>
-            <label>Password</label>
+            <label asp-for="Password"></label>
             <br />
             <input asp-for="Password" />
         </div>
         <div>
-            <label>Confirm Password</label>
+            <label asp-for="ConfirmPassword"></label>
             <br />
             <input asp-for="ConfirmPassword" />
         </div>
